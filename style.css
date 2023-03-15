@@ -1,0 +1,149 @@
+body {
+    width: 375px;
+    height: 680px;
+}
+.fir{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+}
+#vec {
+    position: absolute;
+    top: 28%;
+}
+h1 {
+    position: absolute;
+    font-family: 'Roboto';
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+.sec {
+    width: 100%;
+    height: 90px;
+    position: relative;
+}
+#pro {
+    position: absolute;
+    left: 16px;
+    width: 90px;
+    height: 100%;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+#sec_1 {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 152px;
+    top: 20px;
+    font-size: 17px;
+    font-weight: bold; 
+}
+
+#sec_2 {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 152px;
+    top: 45px;
+    font-size: 12px;
+}
+
+span {
+    width: 52px;
+    text-align: center;
+}
+
+.thi {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    line-height: 0px;
+}
+p, a {
+    font-size: 14px;
+}
+#name {
+    top: 0; 
+    left: 16px;
+    position: absolute;
+}
+#men {
+    left: 16px;
+    position: absolute;
+    top:30%;
+}
+a {
+    left: 16px;
+    top:80%;
+    position: absolute;
+    color: #0F4D73;
+    text-decoration: none;
+}
+.fou {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#b1 {
+    background: #1877F2;
+    border-radius: 5px;
+    width: 145px;
+    height: 25px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    line-height: 25px;
+}
+#b2 {
+    background: #DFDFDF;
+    border-radius: 5px;
+    width: 145px;
+    height: 25px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 25px;
+}
+.fiv {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.six {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    width: 100%;   
+}
+.six_img {
+    width: 124px;
+    height: 125px;
+}
+#six_1, #six_2 {
+    width: 100%;
+    height: 125px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sev {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
