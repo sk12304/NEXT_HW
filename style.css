@@ -1,0 +1,258 @@
+.container{
+    background: #f2f3f5;
+    width: 333px;
+    height: 720px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.top{
+    width: 333px;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    position: fixed;
+    background-color: #f2f3f5;
+}
+    
+#t1{
+    width: 71px;
+    height: 24px;
+    position: absolute;
+    left: 10px;
+    top: 45px;
+}
+#t2{
+    width: 17px;
+    height: 20px;
+    position: absolute;
+    right: 60px;
+    top: 45px;
+}
+#t3{
+    width: 24px;
+    height: 23px;
+    position: absolute;
+    right: 15px;
+    top: 42px;
+}
+
+.bar1{
+    width: 265px;
+    height: 62px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    left: 13px;
+    top: 83px;
+}
+
+#tossbank{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 15px;
+    letter-spacing: -0.5px;
+    font-weight: 900;
+    color: #000000;
+}
+
+.bar2{
+    width: 265px;
+    height: 336px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    left: 13px;
+    top: 154px;
+}
+
+.bar3 {
+    width: 265px;
+    height: 133px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    left: 13px;
+    bottom: 87px;
+}
+
+.account {
+    width: 265px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top: 22px;
+}
+
+.account1 {
+    width: 265px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 66px;
+    align-items: center;
+}
+
+.bar3 .account1 {
+    top: 45px;
+}
+
+.account2 {
+    width: 265px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 130px;
+    align-items: center;
+}
+.account3 {
+    width: 265px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 197px;
+    align-items: center;
+}
+.account4 {
+    width: 265px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 263px;
+    align-items: center;
+}
+
+.bar2 #bank{
+    width: 35px;
+    height: 35px;
+}
+.bar3 img{
+    width: 23px;
+    height: 34px;
+}
+
+.bar2 #bankname{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px; 
+    letter-spacing: -0.5px;
+    color: #51585e;  
+    position: absolute;
+    left: 48px;
+    bottom: 3px;
+}
+
+.bar3 #bankname{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px; 
+    letter-spacing: -0.5px;
+    color: #51585e;  
+    position: absolute;
+    left: 44px;
+    bottom: -5px;
+}
+
+.bar3 #bankname #money{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: -0.7px;
+    color: #323844;
+}
+
+.bar2 #bankname #money{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    color: #323844;
+}
+.putmoney{
+    width: 44px;
+    height: 27px;
+    background-color: #f2f3f5;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    align-items: center;
+    color: #70737c;
+    border-radius: 6px;
+}
+.bar2 .putmoney span{
+    position: relative;
+    top: 6px;
+    left: 1px;
+}
+
+.bar3 .putmoney span{
+    position: relative;
+    top: 7px;
+}
+
+.container .point img{
+    width: 5px;
+    height: 9px;    
+}
+.menu {
+    width: 333px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    position: absolute;
+    bottom: -50px;
+    z-index: 100;
+    border-radius: 15px;
+}
+.menu img{
+    width: 37px;
+    height: 37px;
+}
+.menu_back {
+    width: 333px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    bottom: -50px;
+    z-index: 50;
+}
