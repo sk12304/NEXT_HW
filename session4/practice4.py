@@ -20,4 +20,4 @@ li_time_cleaned = [e.text for e in li_time]
 
 container = {'name' :li_name_ cleaned, 'time':li_time_cleaned, 'coments': li_comments_cleaned}
 df_table = pd.DataFrame(container)
-df_table
+print(df_table)
