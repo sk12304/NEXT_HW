@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'update.css' %}" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-box">
+        <div class="container">
+            <h1>Update</h1>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="title">Todo</label>
+                    <input type="text" name="title" id="title" value="{{ post.title }}">
+                </div>
+                <div>
+                    <label for="content">Detial</label>
+                    <textarea name="content" id="content" cols="30" rows="10">{{ post.content }}</textarea>
+                </div>
+                <div>
+                    <label for="title">Due Date</label>
+                    <input type="date" name="date" id="date">
+                 </div>
+                <button type="submit">수정하기</button>
+            </form>
+        
+        </div>
+    </div>    
+</body>
+</html>

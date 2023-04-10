@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-box">
+        <div class="container">
+            <div>
+                <h1>Todo</h1>
+                <p>{{ post.title }}</p>
+            </div>
+            <div>
+                <h1>Detil</h1>
+                <p>{{ post.content }}</p>
+            </div>
+            <div>
+                <h1>Due Date</h1>
+                <p>{{ post.date }}</p>
+            </div>
+            <a href="{% url 'home' %}">홈으로</a>
+            <a href="{% url 'update' post.pk %}">수정하기</a>
+            <a href="{% url 'delete' post.pk %}">삭제하기</a>
+        </div>
+    </div>
+</body>
+</html>
