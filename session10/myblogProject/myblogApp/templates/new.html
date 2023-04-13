@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <header>
+        <h1>NASS's Blog</h1>
+    </header>
+    <main>
+        <div class="menu">
+            <div class="category">
+                <ul>
+                    {% for category in categorys %}
+                    <li><a href="{% url 'list' category %}">{{ category }}</a></li>
+                    {% endfor %}
+                    <li><a href="{% url 'new' %}">글쓰기</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <h2>글쓰기</h2>
+            <form action="/new" method="post">
+                {% csrf_token %}
+                <div>
+                    <div><span clsas="subtitle">제목</span></div>
+                    <input type="text" name="title">
+                </div>
+                <select name="category" id="select">
+                    {% for category in categorys %}
+                    <option value="{{category}}">{{category}}</option>
+                    {% endfor %}
+                </select>
+                <div>
+                    <div><span clsas="subtitle">내용</span></div>
+                    <textarea name="content" cols="100" rows="30"></textarea> 
+                </div>
+                <button type="submit">글 올리기</button>
+            </form>
+        </div>
+    </main>
+{% endblock %}

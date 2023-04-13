@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="background">
+        <header>
+            <h1>NASS's Blog</h1>
+        </header>
+        <main>
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">전체보기({{count}})</a></li>    
+                    {% for category in categorys %}
+                    <li><a href="{% url 'list' category %}">{{ category }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </main>
+    </div>
+{% endblock %}

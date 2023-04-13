@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>NASS's Blog</h1>
+</header>
+<main>
+    <div class="menu">
+        <div class="category">
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>    
+                {% for category in categorys %}
+                <li><a href="{% url 'list' category %}">{{ category }}</a></li>
+                {% endfor %}
+                <li><a href="{% url 'new' %}">글쓰기</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>
+                <h2>{{ article.title }}</h2>
+                <span>{{ article.category }}</span>
+                <p class="date">{{ article.date }}</p>
+                <p>{{ article.content }}</p>
+            </li>
+        </ul>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="content">
+            <button type="sumbit">댓글쓰기</button>
+        </form>
+        <ul>
+            {% for comment in article.comments.all %}
+            <li>
+                <span>{{ comment.content }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="content">
+        <button type="submit">대댓글쓰기</button>
+    </form>
+    <ul>
+        {% for recomment in comment.recomments.all %}
+        <li>
+            <span>{{ recomment.content }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    </div>
+
+</main>
+{% endblock %}
+

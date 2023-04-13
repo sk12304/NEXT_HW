@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'list.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <header>
+        <h1>NASS's Blog</h1>
+    </header>
+    <main>
+        <div class="menu">
+            <div class="category">
+                <ul>
+                    <li><a href="{% url 'home' %}">글 개수({{count}})</a></li>    
+                    {% for category in categorys %}
+                    <li><a href="{% url 'list' category %}">{{ category }}</a></li>
+                    {% endfor %}
+                    <li><a href="{% url 'new' %}">글쓰기</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <ul>
+                {% for article in articles %}
+                <li>
+                    <h2><a href="{% url 'detail' article.id %}">{{ article.title }}</a></h2>
+                    <span>{{ article.category }}</span>
+                    <p class="date">{{ article.date }}</p>
+                    <p>{{ article.content }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+{% endblock %}

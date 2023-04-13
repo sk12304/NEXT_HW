@@ -1,0 +1,14 @@
+footer {
+    background-color: #f1f1f1;
+    width: 80%;
+    left: 27%;
+    top: 1900px;
+    position: absolute;
+  }
+
+footer p{
+    float: left;
+    margin-left: 20%;
+    font-size: 20pt;
+}
+ 
