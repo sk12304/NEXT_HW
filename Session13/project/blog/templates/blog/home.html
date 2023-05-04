@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %} {% block title %} HOME{% endblock %} {% block css%}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/home.css' %}" />
+{% endblock %} {% block content %}
+<div class="posts_box">
+    {% for post in posts %}
+    <a href="{% url 'blog:detail' post.pk %}">
+      <div class="post_wrapper">
+        <div class="post_title">{{post.title}}</div>
+        <div class="post_content">{{post.content}}</div>
+      </div>
+    </a>
+    {% endfor %}
+    <a id="post-button" href="{% url 'blog:new' %}">New Post</a>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+
+.posts_box{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    border-radius:20px;
+
+}
+
+form {
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    box-sizing:border-box;
+    height:250px;
+    flex-direction: column;
+    width:100%;
+    background-color: white;
+}
+
+input {
+    margin-left:10px;
+}
+
+#post-button{
+    padding:0;
+    border:none;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #F8CBA6;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#post-button:hover {
+    background: #F8CBA6;
+    color: white;
+  }

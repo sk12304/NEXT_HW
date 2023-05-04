@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %} {% block title %} Edit!{% endblock %} {% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/update.css' %}" />
+{% endblock %} {% block content %}
+<div class="edit-post_container">
+  <form method="POST" action="">
+    {% csrf_token %}
+    <input type="text" value="{{post.title}}" name="title" placeholder="title"/>
+    <textarea name="content" placeholder="content">{{post.content}}</textarea>
+    <input id="edit-post_btn" type="submit" value="Post" />
+  </form>
+</div>
+{% endblock %}
